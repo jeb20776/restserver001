@@ -1,0 +1,55 @@
+<div class="jumbotron text-center" bgcolor='#eb8c48'>
+	<h1>{{titleTeams}}</h1>
+	<p>{{ message }}</p>
+	Search: <input type="text" ng-model="search">
+</div>
+	 
+	 
+
+<div class="container">
+  <div class="row row-centered">
+    <div class="col-12 col-centered">
+
+
+
+   <table class="table table-condensed">
+     <thead bgcolor='#eb8c48'>
+        <tr>
+            <th ng-show=False>Team ID</th>
+            <th>Region</th>
+            <th>Rank</th>
+            <th>School Name</th>
+            <th>Wins</th>
+            <th>Points</th>
+            <th>UnderDog Pts.</th>
+            <th>Longshot Pts.</th>
+            <th>Upset Pts.</th>
+        </tr>
+    </thead>
+     
+     
+        <tr ng-repeat="t in getteams() | orderBy: '-points' | filter: (search)">
+        <td ng-show=False>>{{t.id}}</td>
+        <td>{{t.region}}</td>
+        <td>{{t.rank}}</td>   
+         <td>{{t.name}}</td>
+         <td>{{t.wins}}</td>
+        <td>{{t.points}}</td>
+        
+        <td>{{t.underdog_points}}</td>
+        <td>{{t.longshot_points}}</td>
+        <td>{{t.upset_points}}</td>
+        
+      
+      </tr>
+    </table>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>

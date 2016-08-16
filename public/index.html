@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
+
+<head>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+  <nav class="navbar navbar-default" >
+    <div class="container" >
+      <div class="navbar-header" >
+        <a class="navbar-brand" href="#">Note4Coach-2016</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right" >
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#entry"><i class="fa fa-shield"></i> Entry</a></li>
+        <!-- <li><a href="#rules"><i class="fa fa-shield"></i> Rules</a></li> -->
+        <!-- <li><a href="#teams"><i class="fa fa-comment"></i> Teams</a></li> -->
+        <!-- <li><a href="#entries"><i class="fa fa-exclamation-circle"></i> Entries</a></li> -->
+        <li><a href="#notes"><i class="fa fa-exclamation-circle"></i> Notes</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+  <div id="main" >
+      <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+
+  </div>
+  <BR><BR>
+
+  <hr>
+
+  <footer class="text-center" >
+    <p>2015 - Site designed by 20776</p>
+    <p>Angular.js Site - View a tutorial on <a href="https://angularjs.org/">HTML enhanced for web apps!</a></p>
+  </footer>
+
+</body>
+
+</html>

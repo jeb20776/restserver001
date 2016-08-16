@@ -1,0 +1,41 @@
+<section  ng-controller="booksCtrl">
+
+
+
+<div class="jumbotron text-center">
+	<h1>{{notetitle}}</h1>
+	<p>{{ notemessage }}</p>
+
+		Search: <input type="text" ng-model="search">
+
+</div>
+
+
+
+
+
+<h1> Scouting Note</h1>
+
+
+
+
+<!-- <div ng-init="temp_result = taggedresults('gamenote')"> -->
+
+<div ng-init="getdetails2()">
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;    {{search3.subject}} </h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;    {{search3.memo}} </h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;    {{search3.memolong}} </h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;    {{search3.tags}} </h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;    {{search3.picture}} </h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;    {{search3._id}} </h4>
+
+	<!-- &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <button ng-click= "deletenote({{search3._id}})">Click to Delete</button> -->
+
+	 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <button ng-click= "deletenote(search3._id)">Click to Delete</button>
+	<!-- ng-mouseover="showme=!showme"  "showme=!showme -->
+</div>
+
+
+</div>
+
+</section>

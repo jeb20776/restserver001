@@ -1,0 +1,118 @@
+<section  ng-controller="booksCtrl">
+
+
+
+<div class="jumbotron text-center">
+	<h1>{{notestitle}}</h1>
+	<p>{{ notesmessage }}</p>
+		<!-- Search: <input type="text" ng-model="search"> -->
+
+</div>
+
+
+
+
+
+
+	<table class="table table-condensed">
+		<thead bgcolor='#eb8c48'>
+			 <tr>
+					 <th ng-show=showme>ID</th>
+					 <td>	 <a href="" ng-click="showme=!showme"> Subject</a></td>
+					 <th>Memo</th>
+					 <th>Description</th>
+					 <th>Tags</th>
+					 <th>Picture</th>
+					 <th>Date</th>
+					 <!-- <th>Longshot Pts.</th>
+					 <th>Upset Pts.</th> -->
+			 </tr>
+	 </thead>
+
+
+			 <tr ng-repeat="t in notes">
+					 <!-- <td ng-show=showme><a href='http://localhost:3000/#/note/{{t._id}}'> test</td> -->
+			<td ng-show=showme><a href='../#/note/{{t._id}}'> test</td>
+			<td><a href='../#/note/{{t._id}}'>{{t.subject}}</td>
+			 <td>{{t.memo}}</td>
+				<td>{{t.memolong}}</td>
+				<td>{{t.tags}}</td>
+			 <td>{{t.picture}}</td>
+			 <td>{{t.createdAt}}</td>
+			  <td><a ng-href='#/note' ng-click='deletenote(t._id)' >click me</a></td>
+
+
+			 <!-- <td>{{t.longshot_points}}</td>
+			 <td>{{t.upset_points}}</td>
+			  -->
+
+		 </tr>
+	 </table>
+
+
+<h1> Scouting Notes</h1>
+
+
+
+
+
+
+<div ng-init="temp_result = taggedresults('gamenote')">
+
+<!-- single entry -->
+	<div ng-init="selectednoteID('57925653129513406fbeb55b')">
+		<h4>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;    {{search2.subject}} </h4>
+	<!-- ng-mouseover="showme=!showme"  "showme=!showme -->
+</div>
+
+
+<table class="table table-condensed">
+	<thead bgcolor='#eb8c48'>
+		 <tr>
+				 <th ng-show=showme>ID</th>
+				 <td>	 <a href="" ng-click="showme=!showme"> Subject</a></td>
+				 <th>Memo</th>
+				 <th>Description</th>
+				 <th>Tags</th>
+				 <th>Picture</th>
+				 <th>Date</th>
+				 <!-- <th>Longshot Pts.</th>
+				 <th>Upset Pts.</th> -->
+		 </tr>
+ </thead>
+<!--
+{{getdetails('578e8880e9f60bb847ea22e2')}} -->
+
+
+
+		 <tr ng-repeat="t in search">
+			 <td ng-show=showme><a href="../note/" + {{t._id}}> </td>
+
+
+
+
+
+		<td>{{t.subject}}</td>
+		 <td>{{t.memo}}</td>
+			<td>{{t.memolong}}</td>
+			<td>{{t.tags}}</td>
+		 <td>{{t.picture}}</td>
+		 <td>{{t.createdAt}}</td>
+		 <!-- <td>{{t.longshot_points}}</td>
+		 <td>{{t.upset_points}}</td>
+			-->
+
+	 </tr>
+ </table>
+
+</div>
+
+
+
+
+
+	<!-- <p ng-hide ="true"> {{getteams()}}</p> -->
+
+
+
+</section>
